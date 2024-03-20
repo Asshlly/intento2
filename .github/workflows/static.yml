@@ -31,15 +31,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        - name: Node Setup
+      - name: Node Setup
         uses: actions/setup-node@v3
-	      whith:
-      	    node-version: 18
-      	    cache: 'npm'
-      - name: Install Dependencies
-	      run: npm install
-      - name: Build Size
-      	run: npm run build
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install Dependecies
+        run: npm install
+      - name: Build Site
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
